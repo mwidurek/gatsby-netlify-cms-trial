@@ -25,9 +25,25 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
+      - {label: "Show in Production", name: "featuredpost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+
+  - name: "help centre content"
+    label: "Help"
+    folder: "src/pages/help"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - label: "Environment"
+        name: "environment"
+        widget: "object"
+        fields:
+          - {label: "Production", name: "env_prod", widget: "boolean"}
+          - {label: "UAT", name: "env_nonprod", widget: "boolean"}
 
   - name: "pages"
     label: "Pages"
