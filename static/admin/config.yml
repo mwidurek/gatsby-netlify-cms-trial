@@ -44,6 +44,12 @@ collections:
         fields:
           - {label: "Production", name: "env_prod", widget: "boolean"}
           - {label: "UAT", name: "env_nonprod", widget: "boolean"}
+      - label: "Environment"
+        name: "env_select"
+        widget: "select"
+        multiple: true
+        options: ["Production", "UAT"]
+        default: ["UAT"]
 
   - name: "pages"
     label: "Pages"
