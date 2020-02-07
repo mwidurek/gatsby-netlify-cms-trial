@@ -100,3 +100,18 @@ collections:
       - label: "Icon"
         name: "icon"
         widget: "image"
+
+  - name: "Example"
+    label: "example"
+    folder: "src/pages/example"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "action link"
+        name: "action"
+        widget: "list"
+        fields:
+          - {label: "Text", name: "title", widget: "string"}
+          - {label: "Link", name: "link", widget: "string"}
